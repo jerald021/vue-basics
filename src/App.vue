@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div Posts id="app">
     <NavBar/>
 
     <nav>
@@ -16,6 +16,8 @@
      <button v-if="!isTrue">Log Out</button> 
     </div>
 
+    <Posts/>
+
     <Footer/>
   </div>
 </template>
@@ -23,6 +25,7 @@
 <script>
 import NavBar from './components/NavBar.vue'
 import Footer from './components/Footer.vue'
+import Posts from './components/Posts.vue'
 
 export default {
   data(){
@@ -34,6 +37,7 @@ export default {
   components:{
     NavBar,
     Footer,
+    Posts,
   },
   methods:{
      printString(){
