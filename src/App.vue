@@ -16,6 +16,11 @@
      <button v-if="!isTrue">Log Out</button> 
     </div>
 
+    <br>
+    <div>
+      <button @click="changeColor" v-bind:style="{color: activeColor }">change color</button>
+    </div>
+
     <Posts/>
 
     <Footer/>
@@ -31,8 +36,8 @@ export default {
   data(){
     return{
        isTrue: true,
+       activeColor: 'red',
     }
-
   },
   components:{
     NavBar,
@@ -43,6 +48,9 @@ export default {
      printString(){
       const string1 = 'esto es una string';
       return string1;
+    },
+    changeColor(){
+      this.activeColor = 'green';
     }
   },
   mounted(){
@@ -73,5 +81,12 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.dark-background{
+  background-color: black;
+}
+.white-background{
+  background-color: white;
 }
 </style>
